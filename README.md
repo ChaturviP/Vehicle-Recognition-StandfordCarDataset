@@ -1,6 +1,7 @@
 # Intelligent Fine-Grained Vehicle Recognition and Analysis System (P5)
 
 **Live app:** [vehicle-recognition-standfordcardataset-team-altf4.streamlit.app](https://vehicle-recognition-standfordcardataset-team-altf4.streamlit.app/) · **Evaluation:** [`eval_P5_T60.md`](eval_P5_T60.md)
+**Demo Video:** https://drive.google.com/drive/folders/1C13M2CYJiMd7Q8XSDy65zAkOFW9z2glF?usp=sharing
 
 **Team T60 — alt f4**
 
