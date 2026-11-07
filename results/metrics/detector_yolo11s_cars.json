@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "name": "detector_yolo11s_cars",
+    "family": "detector",
+    "split": "test",
+    "condition": "clean",
+    "model_size_mb": 18.286767959594727,
+    "device": "NVIDIA GeForce RTX 4070 fp16",
+    "zero_shot": false,
+    "weights": "models/detector_yolo11s_cars.pt"
+  },
+  "n_images": 8041,
+  "detection": {
+    "mean_iou": 0.9545049319199193,
+    "median_iou": 0.9676246060284351,
+    "iou_ge_0.5": 0.9982589230195249,
+    "iou_ge_0.75": 0.9907971645317747,
+    "map50": 0.9897838506449397,
+    "map50_95": 0.9372331428415409
+  },
+  "efficiency": {
+    "latency_ms_mean": 11.056027931843436,
+    "latency_ms_p95": 12.388000001010369,
+    "model_size_mb": 18.286767959594727
+  }
+}

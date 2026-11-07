@@ -1,0 +1,10 @@
+{
+  "temperature": 0.6444972752743758,
+  "fusion_w": 0.3,
+  "fusion_gate": 0.5,
+  "tau_class": 0.85,
+  "tau_make": 0.9,
+  "top_k": 5,
+  "deep": "models\\classifier_convnext_base_448.pt",
+  "classical": "classical_svm_full"
+}

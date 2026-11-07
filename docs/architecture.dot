@@ -1,0 +1,50 @@
+// System architecture. Render: dot -Tpng -Gdpi=150 docs/architecture.dot -o docs/architecture.png
+digraph P5 {
+  rankdir=TB;
+  graph [fontname="Helvetica", fontsize=11, nodesep=0.25, ranksep=0.45, pad=0.3, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=10, shape=box, style="rounded,filled", fillcolor="#F4F6F8", color="#8A97A6"];
+  edge  [fontname="Helvetica", fontsize=8.5, color="#5F6B7A"];
+
+  upload [label="Uploaded image\n(any size, RGB)", fillcolor="#FFFFFF"];
+
+  subgraph cluster_det {
+    label="1  Detection + ROI"; style="rounded,filled"; fillcolor="#EAF2FB"; color="#9DB9DA";
+    yolo  [label="YOLO11s detector\n(fine-tuned, 1 class)\nletterbox 640 → NMS"];
+    roi   [label="Top box + 12% padding\n→ vehicle crop"];
+    yolo -> roi [label="box, score"];
+  }
+
+  subgraph cluster_cls {
+    label="2a  Classical CV branch (CPU)"; style="rounded,filled"; fillcolor="#FDF3E7"; color="#E3BE8F";
+    pre   [label="Preprocess\nCLAHE (LAB-L) · auto-gamma\nbilateral filter · 256×128"];
+    seg   [label="ROI analysis\nGrabCut mask · Canny edges\ncontour · convex hull"];
+    feat  [label="Features (3,911-d)\nHSV colour · LBP · GLCM · HOG\nedge density · Hu/shape · geometry"];
+    svm   [label="Standardise → PCA 256\n→ RBF SVM (Platt)"];
+    pre -> seg -> feat -> svm;
+  }
+
+  subgraph cluster_deep {
+    label="2b  Deep branch"; style="rounded,filled"; fillcolor="#EDF7EE"; color="#9CCBA0";
+    resize [label="Resize 448×448\nImageNet normalisation"];
+    cnx    [label="ConvNeXt-Base\n(IN-22k → fine-tuned)\n196-class head + make head\nINT8 ONNX on CPU"];
+    resize -> cnx;
+  }
+
+  subgraph cluster_hyb {
+    label="3  Hybrid decision"; style="rounded,filled"; fillcolor="#F2EEF9"; color="#B7A6D9";
+    temp  [label="Temperature scaling\nT = 0.644 (fit on val)"];
+    fuse  [label="Gated fusion\nif p_deep < 0.5:\nlog p += 0.3 · log p_SVM"];
+    pol   [label="Confidence policy\np ≥ 0.85 → make/model/year\nmake p ≥ 0.90 → make only\nelse → uncertain + top-5"];
+    temp -> fuse -> pol;
+  }
+
+  out [label="Output\nbox + label + confidence\ntop-5 · processing stages\nclassical vs deep vs hybrid", fillcolor="#FFFFFF"];
+
+  upload -> yolo;
+  roi -> pre;
+  roi -> resize;
+  cnx -> temp [label="logits"];
+  svm -> fuse [label="196 probs", style=dashed];
+  seg -> out  [label="stage images", style=dotted];
+  pol -> out;
+}

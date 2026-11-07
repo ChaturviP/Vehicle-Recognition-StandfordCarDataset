@@ -1,0 +1,32 @@
+[server]
+maxUploadSize = 25
+# Serves ./static at app/static (hero texture and page backdrop).
+enableStaticServing = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# Hide the developer "Deploy" button and keep only viewer options in the menu.
+toolbarMode = "minimal"
+
+# "Night garage" theme: near-black with a xenon-blue accent. The evaluation plots
+# (matplotlib PNGs on white) are shown on white cards so they stay legible.
+[theme]
+base = "dark"
+primaryColor = "#5B8CFF"
+backgroundColor = "#07090D"
+secondaryBackgroundColor = "#111620"
+textColor = "#E8ECF2"
+borderColor = "#232B38"
+linkColor = "#9BB8FF"
+showWidgetBorder = true
+showSidebarBorder = true
+baseRadius = "10px"
+font = "Archivo:https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap, sans-serif"
+codeFont = "'IBM Plex Mono':https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap, monospace"
+headingFontWeights = [800, 750, 700, 650, 600, 600]
+
+[theme.sidebar]
+backgroundColor = "#0B0E14"
+secondaryBackgroundColor = "#141A25"

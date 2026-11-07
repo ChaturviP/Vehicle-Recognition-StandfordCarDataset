@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "name": "classical_svm_full_color+lbp+glcm+edge+shape+geom",
+    "family": "classical",
+    "split": "test",
+    "condition": "clean",
+    "model_size_mb": 27.9090518951416,
+    "device": "CPU (feature extraction 1 core)",
+    "classifier": "svm",
+    "groups": [
+      "color",
+      "lbp",
+      "glcm",
+      "edge",
+      "shape",
+      "geom"
+    ],
+    "variant": "full",
+    "pca": 128,
+    "C": 3.0
+  },
+  "n_images": 8041,
+  "classification": {
+    "top1": 0.013679890560875513,
+    "top5": 0.04427310036065166,
+    "make_top1": 0.03556771545827633,
+    "mean_confidence": 0.011792132630944252,
+    "mean_confidence_correct": 0.013700642623007298,
+    "mean_confidence_wrong": 0.011765662580728531,
+    "ece": 0.0018877579299312608,
+    "reliability_bins": [
+      {
+        "lo": 0.0,
+        "hi": 0.06666666666666667,
+        "count": 8041,
+        "accuracy": 0.013679890560875513,
+        "confidence": 0.011792132630944252
+      }
+    ],
+    "coverage_curve": [
+      {
+        "threshold": 0.0,
+        "coverage": 1.0,
+        "accuracy": 0.013679890560875513,
+        "rejected_error_rate": NaN
+      },
+      {
+        "threshold": 0.3,
+        "coverage": 0.0,
+        "accuracy": NaN,
+        "rejected_error_rate": 0.9863201094391245
+      },
+      {
+        "threshold": 0.5,
+        "coverage": 0.0,
+        "accuracy": NaN,
+        "rejected_error_rate": 0.9863201094391245
+      },
+      {
+        "threshold": 0.6,
+        "coverage": 0.0,
+        "accuracy": NaN,
+        "rejected_error_rate": 0.9863201094391245
+      },
+      {
+        "threshold": 0.7,
+        "coverage": 0.0,
+        "accuracy": NaN,
+        "rejected_error_rate": 0.9863201094391245
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 0.0,
+        "accuracy": NaN,
+        "rejected_error_rate": 0.9863201094391245
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 0.0,
+        "accuracy": NaN,
+        "rejected_error_rate": 0.9863201094391245
+      },
+      {
+        "threshold": 0.95,
+        "coverage": 0.0,
+        "accuracy": NaN,
+        "rejected_error_rate": 0.9863201094391245
+      }
+    ],
+    "top_confusions": [
+      [
+        64,
+        118,
+        26
+      ],
+      [
+        131,
+        118,
+        23
+      ],
+      [
+        147,
+        118,
+        23
+      ],
+      [
+        136,
+        118,
+        22
+      ],
+      [
+        103,
+        118,
+        21
+      ],
+      [
+        171,
+        118,
+        21
+      ],
+      [
+        23,
+        118,
+        21
+      ],
+      [
+        127,
+        118,
+        21
+      ],
+      [
+        187,
+        118,
+        20
+      ],
+      [
+        97,
+        118,
+        20
+      ]
+    ]
+  },
+  "efficiency": {
+    "latency_ms_mean": 357.9164223438009,
+    "latency_ms_p95": 487.77024549819544,
+    "model_size_mb": 27.9090518951416
+  }
+}

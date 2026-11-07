@@ -1,0 +1,285 @@
+{
+  "temperature": 0.6444972752743758,
+  "fusion_grid_val": [
+    {
+      "w": 0.0,
+      "gate": 1.0,
+      "val_top1": 0.9509001636661211,
+      "val_nll": 0.21581683463240703
+    },
+    {
+      "w": 0.05,
+      "gate": 1.0,
+      "val_top1": 0.953355155482815,
+      "val_nll": 0.2165908731555474
+    },
+    {
+      "w": 0.1,
+      "gate": 1.0,
+      "val_top1": 0.953355155482815,
+      "val_nll": 0.21768792712158652
+    },
+    {
+      "w": 0.2,
+      "gate": 1.0,
+      "val_top1": 0.953355155482815,
+      "val_nll": 0.2207368641238034
+    },
+    {
+      "w": 0.3,
+      "gate": 1.0,
+      "val_top1": 0.9517184942716858,
+      "val_nll": 0.22479048065452725
+    },
+    {
+      "w": 0.5,
+      "gate": 1.0,
+      "val_top1": 0.9525368248772504,
+      "val_nll": 0.23553812372662167
+    },
+    {
+      "w": 0.05,
+      "gate": 0.7,
+      "val_top1": 0.953355155482815,
+      "val_nll": 0.21531536139868812
+    },
+    {
+      "w": 0.1,
+      "gate": 0.7,
+      "val_top1": 0.953355155482815,
+      "val_nll": 0.21496177448794218
+    },
+    {
+      "w": 0.2,
+      "gate": 0.7,
+      "val_top1": 0.953355155482815,
+      "val_nll": 0.21465322375780765
+    },
+    {
+      "w": 0.3,
+      "gate": 0.7,
+      "val_top1": 0.9517184942716858,
+      "val_nll": 0.21481443285107413
+    },
+    {
+      "w": 0.5,
+      "gate": 0.7,
+      "val_top1": 0.9525368248772504,
+      "val_nll": 0.21632409769842745
+    },
+    {
+      "w": 0.05,
+      "gate": 0.5,
+      "val_top1": 0.9525368248772504,
+      "val_nll": 0.2154342503265406
+    },
+    {
+      "w": 0.1,
+      "gate": 0.5,
+      "val_top1": 0.9525368248772504,
+      "val_nll": 0.2151167946955973
+    },
+    {
+      "w": 0.2,
+      "gate": 0.5,
+      "val_top1": 0.9525368248772504,
+      "val_nll": 0.21465893047643636
+    },
+    {
+      "w": 0.3,
+      "gate": 0.5,
+      "val_top1": 0.9509001636661211,
+      "val_nll": 0.21441221152619183
+    },
+    {
+      "w": 0.5,
+      "gate": 0.5,
+      "val_top1": 0.9509001636661211,
+      "val_nll": 0.2144604179063508
+    }
+  ],
+  "fusion_selected": {
+    "w": 0.3,
+    "gate": 0.5,
+    "val_top1": 0.9509001636661211,
+    "val_nll": 0.21441221152619183
+  },
+  "test_top1": {
+    "deep_raw": 0.9488869543589106,
+    "deep_calibrated": 0.9488869543589106,
+    "hybrid": 0.9483895037930605,
+    "classical": 0.09575923392612859
+  },
+  "test_ece": {
+    "deep_raw": 0.1435000825151905,
+    "deep_calibrated": 0.016212775555230718,
+    "hybrid": 0.015070412885370392
+  },
+  "policy_selected_on_val": {
+    "tau_class": 0.85,
+    "tau_make": 0.9,
+    "top_k": 5
+  },
+  "policy_test": {
+    "policy": {
+      "tau_class": 0.85,
+      "tau_make": 0.9,
+      "top_k": 5
+    },
+    "model": {
+      "coverage": 0.9115781619201592,
+      "accuracy": 0.9757162346521145
+    },
+    "make": {
+      "coverage": 0.04203457281432658,
+      "accuracy": 0.9970414201183432
+    },
+    "uncertain": {
+      "coverage": 0.04638726526551424,
+      "top5_contains_true": 0.903485254691689,
+      "top1_accuracy_if_forced": 0.6487935656836461
+    }
+  },
+  "policy_sweep_test": [
+    {
+      "policy": {
+        "tau_class": 0.3,
+        "tau_make": 0.9,
+        "top_k": 5
+      },
+      "model": {
+        "coverage": 0.9946524064171123,
+        "accuracy": 0.951487871967992
+      },
+      "make": {
+        "coverage": 0.0,
+        "accuracy": null
+      },
+      "uncertain": {
+        "coverage": 0.0053475935828877,
+        "top5_contains_true": 0.6511627906976745,
+        "top1_accuracy_if_forced": 0.37209302325581395
+      }
+    },
+    {
+      "policy": {
+        "tau_class": 0.5,
+        "tau_make": 0.9,
+        "top_k": 5
+      },
+      "model": {
+        "coverage": 0.985449570948887,
+        "accuracy": 0.956082786471479
+      },
+      "make": {
+        "coverage": 0.0012436264146250466,
+        "accuracy": 1.0
+      },
+      "uncertain": {
+        "coverage": 0.013306802636487999,
+        "top5_contains_true": 0.7663551401869159,
+        "top1_accuracy_if_forced": 0.42990654205607476
+      }
+    },
+    {
+      "policy": {
+        "tau_class": 0.7,
+        "tau_make": 0.9,
+        "top_k": 5
+      },
+      "model": {
+        "coverage": 0.9518716577540107,
+        "accuracy": 0.9668147373922132
+      },
+      "make": {
+        "coverage": 0.018156945653525682,
+        "accuracy": 1.0
+      },
+      "uncertain": {
+        "coverage": 0.029971396592463624,
+        "top5_contains_true": 0.8713692946058091,
+        "top1_accuracy_if_forced": 0.5809128630705395
+      }
+    },
+    {
+      "policy": {
+        "tau_class": 0.8,
+        "tau_make": 0.9,
+        "top_k": 5
+      },
+      "model": {
+        "coverage": 0.9293620196492973,
+        "accuracy": 0.972969356349525
+      },
+      "make": {
+        "coverage": 0.030841935082701156,
+        "accuracy": 0.9959677419354839
+      },
+      "uncertain": {
+        "coverage": 0.03979604526800149,
+        "top5_contains_true": 0.8875,
+        "top1_accuracy_if_forced": 0.609375
+      }
+    },
+    {
+      "policy": {
+        "tau_class": 0.9,
+        "tau_make": 0.9,
+        "top_k": 5
+      },
+      "model": {
+        "coverage": 0.8899390623056834,
+        "accuracy": 0.9787590832867524
+      },
+      "make": {
+        "coverage": 0.05757990299713966,
+        "accuracy": 0.9978401727861771
+      },
+      "uncertain": {
+        "coverage": 0.052481034697176965,
+        "top5_contains_true": 0.9075829383886256,
+        "top1_accuracy_if_forced": 0.6682464454976303
+      }
+    },
+    {
+      "policy": {
+        "tau_class": 0.95,
+        "tau_make": 0.9,
+        "top_k": 5
+      },
+      "model": {
+        "coverage": 0.8445466981718692,
+        "accuracy": 0.9829185686938595
+      },
+      "make": {
+        "coverage": 0.10297226713095387,
+        "accuracy": 0.9879227053140096
+      },
+      "uncertain": {
+        "coverage": 0.052481034697176965,
+        "top5_contains_true": 0.9075829383886256,
+        "top1_accuracy_if_forced": 0.6682464454976303
+      }
+    }
+  ],
+  "policy_val": {
+    "policy": {
+      "tau_class": 0.85,
+      "tau_make": 0.9,
+      "top_k": 5
+    },
+    "model": {
+      "coverage": 0.9091653027823241,
+      "accuracy": 0.9720972097209721
+    },
+    "make": {
+      "coverage": 0.045008183306055646,
+      "accuracy": 1.0
+    },
+    "uncertain": {
+      "coverage": 0.04582651391162029,
+      "top5_contains_true": 0.9464285714285714,
+      "top1_accuracy_if_forced": 0.6607142857142857
+    }
+  }
+}

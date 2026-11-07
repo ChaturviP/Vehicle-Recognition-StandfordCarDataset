@@ -1,0 +1,18 @@
+# Install the CUDA build of PyTorch FIRST (see README), then:
+#   pip install -r requirements.txt
+numpy
+pandas
+pillow
+scipy
+scikit-learn
+scikit-image
+opencv-python
+lightgbm
+matplotlib
+tqdm
+timm
+ultralytics
+onnx
+onnxruntime
+gradio
+pytest

@@ -1,0 +1,44 @@
+[
+  {
+    "model": "convnext_base_448",
+    "variant": "pytorch_fp32",
+    "size_mb": 335.1396894454956,
+    "latency_ms": 540.8402799996111,
+    "top1": 0.948,
+    "top5": 0.994,
+    "n": 500,
+    "threads": 2
+  },
+  {
+    "model": "convnext_base_448",
+    "variant": "onnx_fp32",
+    "size_mb": 334.98694133758545,
+    "latency_ms": 489.6297866661674,
+    "top1": 0.948,
+    "top5": 0.994,
+    "n": 500,
+    "threads": 2
+  },
+  {
+    "model": "convnext_base_448",
+    "variant": "onnx_int8_dynamic",
+    "size_mb": 94.96628952026367,
+    "latency_ms": 215.89136333338197,
+    "top1": 0.952,
+    "top5": 0.994,
+    "n": 500,
+    "threads": 2
+  },
+  {
+    "model": "detector",
+    "variant": "pytorch_fp32_cpu",
+    "size_mb": 18.286767959594727,
+    "latency_ms": 47.08155600048485
+  },
+  {
+    "model": "detector",
+    "variant": "onnx_fp32_cpu",
+    "size_mb": 36.171302795410156,
+    "latency_ms": 38.147656000437564
+  }
+]

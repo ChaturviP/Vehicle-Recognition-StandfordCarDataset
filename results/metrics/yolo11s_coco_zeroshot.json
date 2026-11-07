@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "name": "yolo11s_coco_zeroshot",
+    "family": "detector",
+    "split": "test",
+    "condition": "clean",
+    "model_size_mb": 18.419010162353516,
+    "device": "NVIDIA GeForce RTX 4070 fp16",
+    "zero_shot": true,
+    "weights": "yolo11s.pt"
+  },
+  "n_images": 8041,
+  "detection": {
+    "mean_iou": 0.8856510717783518,
+    "median_iou": 0.9599666915372868,
+    "iou_ge_0.5": 0.9269991294615098,
+    "iou_ge_0.75": 0.9191642830493719,
+    "map50": 0.886467842261568,
+    "map50_95": 0.8212983478700888
+  },
+  "efficiency": {
+    "latency_ms_mean": 11.254469444092207,
+    "latency_ms_p95": 11.690499997712323,
+    "model_size_mb": 18.419010162353516
+  }
+}

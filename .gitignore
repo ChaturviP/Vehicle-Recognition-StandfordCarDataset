@@ -1,0 +1,40 @@
+# data and model weights stay local
+/data/
+/models/*
+# the four files the deployed app needs are committed (each < 100 MB)
+!/models/detector_yolo11s_cars.onnx
+!/models/convnext_base_448_int8.onnx
+!/models/classical_svm_full.joblib
+!/models/hybrid_config.json
+/runs/
+results/preds/
+*.pt
+*.pth
+*.onnx
+!/models/detector_yolo11s_cars.onnx
+!/models/convnext_base_448_int8.onnx
+*.ckpt
+*.npz
+*.npy
+
+# python / env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# os / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# keep results/metrics, plots and docs in git
+!results/metrics/
+
+# Hugging Face Space build output
+/space_build/
+.gradio/
+/streamlit_build/

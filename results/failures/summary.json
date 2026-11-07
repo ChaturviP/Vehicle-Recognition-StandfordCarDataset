@@ -1,0 +1,74 @@
+{
+  "similar_class_pairs": [
+    {
+      "true": "Chevrolet Silverado 1500 Regular Cab 2012",
+      "predicted": "Chevrolet Silverado 2500HD Regular Cab 2012",
+      "count": 12
+    },
+    {
+      "true": "Audi V8 Sedan 1994",
+      "predicted": "Audi 100 Sedan 1994",
+      "count": 11
+    },
+    {
+      "true": "Chevrolet Express Van 2007",
+      "predicted": "Chevrolet Express Cargo Van 2007",
+      "count": 11
+    },
+    {
+      "true": "Dodge Caliber Wagon 2012",
+      "predicted": "Dodge Caliber Wagon 2007",
+      "count": 11
+    },
+    {
+      "true": "Chevrolet Silverado 1500 Hybrid Crew Cab 2012",
+      "predicted": "Chevrolet Silverado 1500 Extended Cab 2012",
+      "count": 10
+    },
+    {
+      "true": "Chevrolet Express Cargo Van 2007",
+      "predicted": "Chevrolet Express Van 2007",
+      "count": 10
+    }
+  ],
+  "detector": {
+    "iou_lt_0.5": 14,
+    "iou_eq_0": 6,
+    "worst": [
+      {
+        "file": "01661.jpg",
+        "iou": 0.0
+      },
+      {
+        "file": "05848.jpg",
+        "iou": 0.0
+      },
+      {
+        "file": "06611.jpg",
+        "iou": 0.0
+      },
+      {
+        "file": "05320.jpg",
+        "iou": 0.0
+      },
+      {
+        "file": "03821.jpg",
+        "iou": 0.0
+      },
+      {
+        "file": "07875.jpg",
+        "iou": 0.0023678725255349225
+      }
+    ]
+  },
+  "confident_errors": {
+    "n_wrong": 411,
+    "n_wrong_conf_ge_0.85": 64
+  },
+  "error_breakdown": {
+    "errors": 411,
+    "same_make": 301,
+    "same_model_different_year": 31
+  },
+  "occlusion_resolution_figure": true
+}

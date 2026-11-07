@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "name": "convnext_224_detcrop",
+    "family": "deep",
+    "split": "test",
+    "condition": "clean",
+    "model_size_mb": 335.13801097869873,
+    "device": "NVIDIA GeForce RTX 4070 bf16",
+    "backbone": "convnext_base.fb_in22k_ft_in1k",
+    "img_size": 224,
+    "crop": "det",
+    "tta": false,
+    "det_preds": "results\\preds\\detector_yolo11s_cars.npz",
+    "ckpt": "models\\classifier_convnext_224.pt"
+  },
+  "n_images": 8041,
+  "classification": {
+    "top1": 0.9303569207809974,
+    "top5": 0.9910458898146997,
+    "make_top1": 0.9778634498196742,
+    "mean_confidence": 0.7901130318641663,
+    "mean_confidence_correct": 0.8128597140312195,
+    "mean_confidence_wrong": 0.48855841159820557,
+    "ece": 0.13974643298889805,
+    "reliability_bins": [
+      {
+        "lo": 0.0,
+        "hi": 0.06666666666666667,
+        "count": 8,
+        "accuracy": 0.125,
+        "confidence": 0.056975945830345154
+      },
+      {
+        "lo": 0.06666666666666667,
+        "hi": 0.13333333333333333,
+        "count": 79,
+        "accuracy": 0.3291139240506329,
+        "confidence": 0.10414210706949234
+      },
+      {
+        "lo": 0.13333333333333333,
+        "hi": 0.2,
+        "count": 104,
+        "accuracy": 0.5673076923076923,
+        "confidence": 0.170342817902565
+      },
+      {
+        "lo": 0.2,
+        "hi": 0.26666666666666666,
+        "count": 128,
+        "accuracy": 0.7109375,
+        "confidence": 0.23444178700447083
+      },
+      {
+        "lo": 0.26666666666666666,
+        "hi": 0.3333333333333333,
+        "count": 138,
+        "accuracy": 0.6811594202898551,
+        "confidence": 0.30326247215270996
+      },
+      {
+        "lo": 0.3333333333333333,
+        "hi": 0.4,
+        "count": 173,
+        "accuracy": 0.7225433526011561,
+        "confidence": 0.3692123591899872
+      },
+      {
+        "lo": 0.4,
+        "hi": 0.4666666666666667,
+        "count": 207,
+        "accuracy": 0.7584541062801933,
+        "confidence": 0.43395164608955383
+      },
+      {
+        "lo": 0.4666666666666667,
+        "hi": 0.5333333333333333,
+        "count": 253,
+        "accuracy": 0.8300395256916996,
+        "confidence": 0.4998612403869629
+      },
+      {
+        "lo": 0.5333333333333333,
+        "hi": 0.6,
+        "count": 280,
+        "accuracy": 0.8642857142857143,
+        "confidence": 0.566878616809845
+      },
+      {
+        "lo": 0.6,
+        "hi": 0.6666666666666666,
+        "count": 310,
+        "accuracy": 0.8806451612903226,
+        "confidence": 0.6358279585838318
+      },
+      {
+        "lo": 0.6666666666666666,
+        "hi": 0.7333333333333333,
+        "count": 438,
+        "accuracy": 0.9246575342465754,
+        "confidence": 0.7022827863693237
+      },
+      {
+        "lo": 0.7333333333333333,
+        "hi": 0.8,
+        "count": 625,
+        "accuracy": 0.9552,
+        "confidence": 0.7702113389968872
+      },
+      {
+        "lo": 0.8,
+        "hi": 0.8666666666666667,
+        "count": 1076,
+        "accuracy": 0.9656133828996283,
+        "confidence": 0.83661288022995
+      },
+      {
+        "lo": 0.8666666666666667,
+        "hi": 0.9333333333333333,
+        "count": 2122,
+        "accuracy": 0.9816211121583411,
+        "confidence": 0.9042375087738037
+      },
+      {
+        "lo": 0.9333333333333333,
+        "hi": 1.0,
+        "count": 2100,
+        "accuracy": 0.9880952380952381,
+        "confidence": 0.9576537013053894
+      }
+    ],
+    "coverage_curve": [
+      {
+        "threshold": 0.0,
+        "coverage": 1.0,
+        "accuracy": 0.9298594702151474,
+        "rejected_error_rate": NaN
+      },
+      {
+        "threshold": 0.3,
+        "coverage": 0.9524934709613232,
+        "accuracy": 0.9479044261652957,
+        "rejected_error_rate": 0.4319371727748691
+      },
+      {
+        "threshold": 0.5,
+        "coverage": 0.880736226837458,
+        "accuracy": 0.9634284100536572,
+        "rejected_error_rate": 0.3180396246089677
+      },
+      {
+        "threshold": 0.6,
+        "coverage": 0.8296231811963686,
+        "accuracy": 0.9701693898965672,
+        "rejected_error_rate": 0.2664233576642336
+      },
+      {
+        "threshold": 0.7,
+        "coverage": 0.7663225966919537,
+        "accuracy": 0.9764686790003245,
+        "rejected_error_rate": 0.22299095263437999
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 0.6588732744683498,
+        "accuracy": 0.9809362023405058,
+        "rejected_error_rate": 0.16879329201604082
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 0.42009700286034074,
+        "accuracy": 0.9875666074600356,
+        "rejected_error_rate": 0.11194509972120952
+      },
+      {
+        "threshold": 0.95,
+        "coverage": 0.16876010446461884,
+        "accuracy": 0.9867354458364038,
+        "rejected_error_rate": 0.08168761220825853
+      }
+    ],
+    "top_confusions": [
+      [
+        83,
+        82,
+        29
+      ],
+      [
+        41,
+        42,
+        19
+      ],
+      [
+        13,
+        18,
+        13
+      ],
+      [
+        21,
+        12,
+        12
+      ],
+      [
+        87,
+        165,
+        12
+      ],
+      [
+        15,
+        16,
+        10
+      ],
+      [
+        70,
+        63,
+        10
+      ],
+      [
+        74,
+        68,
+        9
+      ],
+      [
+        70,
+        118,
+        9
+      ],
+      [
+        63,
+        118,
+        9
+      ]
+    ]
+  },
+  "efficiency": {
+    "latency_ms_mean": 20.411927999957697,
+    "latency_ms_p95": 34.605500000179745,
+    "model_size_mb": 335.13801097869873
+  }
+}

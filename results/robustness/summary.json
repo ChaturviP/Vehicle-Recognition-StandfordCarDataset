@@ -1,0 +1,193 @@
+{
+  "model": "convnext_base_448",
+  "n_images": 4000,
+  "temperature": 0.6444972752743758,
+  "classifier": [
+    {
+      "condition": "clean",
+      "clahe": false,
+      "top1": 0.949,
+      "top5": 0.9965,
+      "mean_conf": 0.9553771615028381
+    },
+    {
+      "condition": "dark_gamma2.2",
+      "clahe": false,
+      "top1": 0.9485,
+      "top5": 0.9935,
+      "mean_conf": 0.948134183883667
+    },
+    {
+      "condition": "bright_gamma0.45",
+      "clahe": false,
+      "top1": 0.9465,
+      "top5": 0.99625,
+      "mean_conf": 0.9524151682853699
+    },
+    {
+      "condition": "brightness-40",
+      "clahe": false,
+      "top1": 0.94825,
+      "top5": 0.996,
+      "mean_conf": 0.9553919434547424
+    },
+    {
+      "condition": "brightness+40",
+      "clahe": false,
+      "top1": 0.94625,
+      "top5": 0.99575,
+      "mean_conf": 0.9520856738090515
+    },
+    {
+      "condition": "lowlight_noise",
+      "clahe": false,
+      "top1": 0.92425,
+      "top5": 0.991,
+      "mean_conf": 0.9217897653579712
+    },
+    {
+      "condition": "blur_sigma2",
+      "clahe": false,
+      "top1": 0.864,
+      "top5": 0.9675,
+      "mean_conf": 0.8456481695175171
+    },
+    {
+      "condition": "occlusion10",
+      "clahe": false,
+      "top1": 0.94375,
+      "top5": 0.994,
+      "mean_conf": 0.9462376832962036
+    },
+    {
+      "condition": "occlusion25",
+      "clahe": false,
+      "top1": 0.9215,
+      "top5": 0.9905,
+      "mean_conf": 0.9197798371315002
+    },
+    {
+      "condition": "occlusion50",
+      "clahe": false,
+      "top1": 0.78675,
+      "top5": 0.9315,
+      "mean_conf": 0.8054168820381165
+    },
+    {
+      "condition": "res224",
+      "clahe": false,
+      "top1": 0.9315,
+      "top5": 0.9925,
+      "mean_conf": 0.9233688712120056
+    },
+    {
+      "condition": "res128",
+      "clahe": false,
+      "top1": 0.869,
+      "top5": 0.9805,
+      "mean_conf": 0.8197699189186096
+    },
+    {
+      "condition": "res64",
+      "clahe": false,
+      "top1": 0.37475,
+      "top5": 0.67075,
+      "mean_conf": 0.5017575621604919
+    },
+    {
+      "condition": "clean",
+      "clahe": true,
+      "top1": 0.94675,
+      "top5": 0.99625,
+      "mean_conf": 0.951095461845398
+    },
+    {
+      "condition": "dark_gamma2.2",
+      "clahe": true,
+      "top1": 0.94725,
+      "top5": 0.9955,
+      "mean_conf": 0.9478318095207214
+    },
+    {
+      "condition": "brightness-40",
+      "clahe": true,
+      "top1": 0.94875,
+      "top5": 0.99525,
+      "mean_conf": 0.9514106512069702
+    },
+    {
+      "condition": "lowlight_noise",
+      "clahe": true,
+      "top1": 0.923,
+      "top5": 0.9925,
+      "mean_conf": 0.9180008769035339
+    }
+  ],
+  "pose_buckets_clean": [
+    {
+      "bucket": "narrow (<1.3): front / rear views",
+      "n": 226,
+      "top1": 0.9292035398230089
+    },
+    {
+      "bucket": "medium (1.3-1.8): three-quarter",
+      "n": 1532,
+      "top1": 0.9556135770234987
+    },
+    {
+      "bucket": "wide (>=1.8): side views",
+      "n": 2242,
+      "top1": 0.9464763603925067
+    }
+  ],
+  "detector": [
+    {
+      "condition": "clean",
+      "n": 500,
+      "mean_iou": 0.9535153508691375,
+      "iou_ge_0.5": 0.996
+    },
+    {
+      "condition": "dark_gamma2.2",
+      "n": 500,
+      "mean_iou": 0.9481899662711142,
+      "iou_ge_0.5": 0.994
+    },
+    {
+      "condition": "lowlight_noise",
+      "n": 500,
+      "mean_iou": 0.9427827711578713,
+      "iou_ge_0.5": 0.992
+    },
+    {
+      "condition": "blur_sigma2",
+      "n": 500,
+      "mean_iou": 0.9455462447947235,
+      "iou_ge_0.5": 0.996
+    },
+    {
+      "condition": "occlusion25",
+      "n": 500,
+      "mean_iou": 0.8763501226641988,
+      "iou_ge_0.5": 0.932
+    },
+    {
+      "condition": "occlusion50",
+      "n": 500,
+      "mean_iou": 0.5915482379145348,
+      "iou_ge_0.5": 0.538
+    },
+    {
+      "condition": "res128",
+      "n": 500,
+      "mean_iou": 0.9466537895050742,
+      "iou_ge_0.5": 1.0
+    },
+    {
+      "condition": "res64",
+      "n": 500,
+      "mean_iou": 0.8947928859514193,
+      "iou_ge_0.5": 0.978
+    }
+  ]
+}
